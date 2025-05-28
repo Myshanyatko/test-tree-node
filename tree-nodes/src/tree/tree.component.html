@@ -1,0 +1,7 @@
+<div class="tree">
+  @for (node of nodes(); track node.id) {
+    <div style="margin-bottom: 20px">
+      <node [node]="node"></node>
+    </div>
+  }
+</div>

@@ -1,0 +1,23 @@
+.node {
+    padding: 10px 0;
+}
+
+.node--flex {
+    justify-self: flex-start;
+    display: flex;
+    justify-content: center;
+}
+
+.node--flex .button {
+    padding-right: 10px;
+    align-self: center;
+}
+
+.node--flex .button button {
+   border-radius: 50%;
+   cursor: pointer;
+}
+
+.deleted {
+    color: rgb(145, 142, 145);
+}

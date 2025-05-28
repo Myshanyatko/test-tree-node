@@ -1,0 +1,25 @@
+<div class="node">
+  <div class="node--flex">
+    <div class="button">
+      @if (node().children.length) {
+      <button (click)="setCollapse()">
+        <b>
+          {{ !isCollapse() ? "˅" : " ^" }}
+        </b>
+      </button>
+      }
+    </div>
+    <div [ngClass]="{ deleted: node().is_deleted }">
+      {{ node().id }} - {{ node().title }}
+    </div>
+  </div>
+  @if (node().children.length) {
+  <div style="margin-left: 50px">
+    @if (isCollapse()) {
+        @for (child of node().children; track child.id) {
+          <node [node]="child"></node>
+        } 
+    }
+  </div>
+  }
+</div>
